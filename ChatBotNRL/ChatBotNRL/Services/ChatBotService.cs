@@ -84,7 +84,7 @@ namespace ChatBotNRL.Services
                 {
                     new BotMessage
                     {
-                        Text = "Algo de errado não está certo!",
+                        Text = "Algo de errado não está certo!!!",
                         From = "Bot"
                     }
                 }).ToArray()
