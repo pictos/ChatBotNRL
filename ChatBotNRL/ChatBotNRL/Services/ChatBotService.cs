@@ -14,7 +14,7 @@ namespace ChatBotNRL.Services
 {
     public class ChatBotService
     {
-        private readonly string _baseBotEndPointAddress = "https://.botframework.com";
+        private readonly string _baseBotEndPointAddress = "urlBotFramework";
         private HttpClient _client;
         private string _directLineKey = ""; //USE YOUR OWN DIRECTLINE KEY
         private Conversation _lastConversation = null;
