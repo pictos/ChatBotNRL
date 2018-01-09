@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ChatBotNRL.Views.RoboNRLView">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" 
+               HorizontalOptions="FillAndExpand" 
+               VerticalOptions="FillAndExpand"
+                     Padding="50">
+
+            <ListView ItemsSource="{Binding Messages}" 
+              Margin="10"
+              HasUnevenRows="True"
+              IsPullToRefreshEnabled="True" 
+              IsRefreshing="{Binding IsRefreshing }">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout HorizontalOptions="FillAndExpand" 
+                         VerticalOptions="FillAndExpand" 
+                         Orientation="Horizontal">                                
+                                <Label Text="{Binding Message}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <StackLayout VerticalOptions="End" HorizontalOptions="FillAndExpand">
+                <Button Text="Send" Command="{Binding SendMessageCommand}"/>
+                <Entry Placeholder="Please enter message.." Text="{Binding TextMessage}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
